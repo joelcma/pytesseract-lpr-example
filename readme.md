@@ -1,0 +1,1 @@
+# A simple pytesseract license plate recognition example used to benchmark it's performance
