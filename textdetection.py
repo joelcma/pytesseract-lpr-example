@@ -38,7 +38,8 @@ def main():
 def readImgAndDoOCR(path):
     img = cv2.imread(path)
     ocr_utput, total_time, cleaning_time, ocr_time = doOCR(img)
-    print(f'Cleaning: {cleaning_time} ms\nOcr: {ocr_time} ms\nTotal: {total_time} ms\n{path} -> "{ocr_utput}"')
+    (H, W) = img.shape[:2]
+    print(f'Resolution: {W}x{H}\nCleaning: {cleaning_time} ms\nOcr: {ocr_time} ms\nTotal: {total_time} ms\n{path} -> "{ocr_utput}"')
     print("")
 
 def doOCR(img):
